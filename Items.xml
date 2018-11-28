@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?><publications>
+<item isbn="dd">
+<isbook>true</isbook>
+<name>dd</name>
+<isbn>dd</isbn>
+<authorname>dd</authorname>
+<sharesinfo>
+<multiplicity>2</multiplicity>
+<remaining>1</remaining>
+</sharesinfo>
+<borrowers>
+<currentborrowername>Pi</currentborrowername>
+</borrowers>
+<reservers/>
+</item>
+<item isbn="ddisbn22">
+<isbook>false</isbook>
+<name>dd</name>
+<isbn>ddisbn22</isbn>
+<authorname>aaa</authorname>
+<sharesinfo>
+<multiplicity>3</multiplicity>
+<remaining>3</remaining>
+</sharesinfo>
+<borrowers/>
+<reservers/>
+</item>
+<item isbn="pp123">
+<isbook>true</isbook>
+<name>Pride and Prejudice</name>
+<isbn>pp123</isbn>
+<authorname>Jane Austin</authorname>
+<sharesinfo>
+<multiplicity>1</multiplicity>
+<remaining>0</remaining>
+</sharesinfo>
+<borrowers>
+<currentborrowername>you</currentborrowername>
+</borrowers>
+<reservers/>
+</item>
+<item isbn="book2isbn">
+<isbook>true</isbook>
+<name>book2</name>
+<isbn>book2isbn</isbn>
+<authorname>a2</authorname>
+<sharesinfo>
+<multiplicity>1</multiplicity>
+<remaining>1</remaining>
+</sharesinfo>
+<borrowers/>
+<reservers/>
+</item>
+<item isbn="cd2isbn">
+<isbook>false</isbook>
+<name>cd2</name>
+<isbn>cd2isbn</isbn>
+<authorname>a4</authorname>
+<sharesinfo>
+<multiplicity>4</multiplicity>
+<remaining>4</remaining>
+</sharesinfo>
+<borrowers/>
+<reservers/>
+</item>
+<item isbn="book1isbn">
+<isbook>true</isbook>
+<name>book1</name>
+<isbn>book1isbn</isbn>
+<authorname>a1</authorname>
+<sharesinfo>
+<multiplicity>3</multiplicity>
+<remaining>2</remaining>
+</sharesinfo>
+<borrowers>
+<currentborrowername>you</currentborrowername>
+</borrowers>
+<reservers/>
+</item>
+<item isbn="cd1isbn">
+<isbook>false</isbook>
+<name>cd1</name>
+<isbn>cd1isbn</isbn>
+<authorname>a3</authorname>
+<sharesinfo>
+<multiplicity>1</multiplicity>
+<remaining>0</remaining>
+</sharesinfo>
+<borrowers>
+<currentborrowername>you</currentborrowername>
+</borrowers>
+<reservers/>
+</item>
+<item isbn="book4isbn">
+<isbook>true</isbook>
+<name>book4</name>
+<isbn>book4isbn</isbn>
+<authorname>a5</authorname>
+<sharesinfo>
+<multiplicity>4</multiplicity>
+<remaining>4</remaining>
+</sharesinfo>
+<borrowers/>
+<reservers/>
+</item>
+<item isbn="book3isbn">
+<isbook>true</isbook>
+<name>book3</name>
+<isbn>book3isbn</isbn>
+<authorname>a4</authorname>
+<sharesinfo>
+<multiplicity>4</multiplicity>
+<remaining>3</remaining>
+</sharesinfo>
+<borrowers>
+<currentborrowername>Pi</currentborrowername>
+</borrowers>
+<reservers/>
+</item>
+<item isbn="dfdf">
+<isbook>true</isbook>
+<name>dfsd</name>
+<isbn>dfdf</isbn>
+<authorname>dfa</authorname>
+<sharesinfo>
+<multiplicity>3</multiplicity>
+<remaining>2</remaining>
+</sharesinfo>
+<borrowers>
+<currentborrowername>you</currentborrowername>
+</borrowers>
+<reservers/>
+</item>
+</publications>

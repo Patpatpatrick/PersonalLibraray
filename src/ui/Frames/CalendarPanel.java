@@ -130,16 +130,7 @@ public class CalendarPanel extends JPanel {
         monthbox.setSelectedIndex(nowmonth-1);
 
         LocalDate start = nowdate.with(firstDayOfMonth());
-        int dayOfWeekIntValue = start.getDayOfWeek().getValue();
-
-        YearMonth yearMonthObject = YearMonth.of(nowyear, nowmonth);
-        int daysInMonth = yearMonthObject.lengthOfMonth(); //28
-        int j=1;
-        for(int i=dayOfWeekIntValue;i<daysInMonth+dayOfWeekIntValue;i++,j++){
-            button_day[i].setEnabled(true);
-            button_day[i].setText(Integer.toString(j));
-        }
-        setVisible(true);
+        fillInButtons(nowyear, nowmonth, start);
     }
 
     private void paintDay(int year,int month) {
@@ -148,6 +139,10 @@ public class CalendarPanel extends JPanel {
             a.setEnabled(false);
         }
         LocalDate start= LocalDate.of(year,month,1);
+        fillInButtons(year, month, start);
+    }
+
+    private void fillInButtons(int year, int month, LocalDate start) {
         int dayOfWeekIntValue = start.getDayOfWeek().getValue();
 
         YearMonth yearMonthObject = YearMonth.of(year, month);
@@ -160,6 +155,7 @@ public class CalendarPanel extends JPanel {
         }
         setVisible(true);
     }
+
     //TODO
     private void generateDate(int year, int month, int day){
         selecteddate=LocalDate.of(year,month,day);

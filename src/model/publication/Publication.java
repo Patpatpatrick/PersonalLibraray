@@ -1,28 +1,19 @@
 package model.publication;
 
-import exception.borrowexception.ExceedMaxLoanCreditException;
-import exception.borrowexception.NoDuplicateLoanException;
 import exception.publicationexception.NegRemainingException;
 import exception.publicationexception.RemainingExceedMultiException;
 import model.Borrower.Borrower;
 import observer.ItemReserver;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Objects;
 
 public abstract class Publication extends RsvSubject {
+    private LibraryCard libraryCard = new LibraryCard();
     private String name, isbn, authorname;
     private SharesInfo shares;
-    //TODO:use this field
-    private LocalDate recordeddate;
 
     protected boolean isbook;
-
-    public ArrayList<Borrower> getCurrentborrowers() {
-        return currentborrowers;
-    }
-    protected ArrayList<Borrower> currentborrowers =new ArrayList<>();
 
     abstract public void addCurrentBorrower(Borrower currentborrower) throws Exception;
 
@@ -49,7 +40,7 @@ public abstract class Publication extends RsvSubject {
         this.isbn = isbn;
         this.authorname = authorname;
         this.shares = shares;
-        this.currentborrowers = currentborrowers;
+        this.libraryCard.currentborrowers = currentborrowers;
         super.reservers=reservers;
     }
 

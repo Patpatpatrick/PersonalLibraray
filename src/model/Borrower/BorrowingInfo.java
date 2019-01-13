@@ -4,13 +4,15 @@ import exception.borrowexception.ExceedMaxLoanCreditException;
 import exception.borrowexception.NoDuplicateLoanException;
 import model.publication.Publication;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class BorrowingInfo {
     public static final int MAXMUM = 5;
-    ArrayList<Publication> currentitems=new ArrayList<>();
-    ArrayList<Publication> historyitems=new ArrayList<>();
-    ArrayList<Publication> reserveditems=new ArrayList<>();
+    private HashMap<Publication, LocalDate> currentitems=new HashMap<>();
+    private HashMap<Publication, LocalDate> historyitems=new HashMap<>();
+    private HashMap<Publication, LocalDate> reserveditems=new HashMap<>();
 
 
     public BorrowingInfo() {

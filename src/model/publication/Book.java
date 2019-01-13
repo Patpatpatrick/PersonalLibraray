@@ -1,8 +1,5 @@
 package model.publication;
 
-import control.frontcenter.PublicationParser;
-import exception.borrowexception.ExceedMaxLoanCreditException;
-import exception.borrowexception.NoDuplicateLoanException;
 import model.Borrower.Borrower;
 import observer.ItemReserver;
 
@@ -26,8 +23,8 @@ public class Book extends Publication {
 
     @Override
     public void addCurrentBorrower(Borrower currentborrower) throws Exception {
-        if(!currentborrowers.contains(currentborrower)){
-            currentborrowers.add(currentborrower);
+        if(!libraryCard.currentborrowers.contains(currentborrower)){
+            libraryCard.currentborrowers.add(currentborrower);
             if(!currentborrower.getBorrowingInfo().getCurrentitems().contains(this)){
                 currentborrower.addItemtoCurrent(this);
             }

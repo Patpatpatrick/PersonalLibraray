@@ -4,24 +4,26 @@ import control.backendcenter.PublicationOperationCenter;
 import control.backendcenter.OperationCenter;
 import model.Borrower.BorrowerList;
 //import ui.Frames.WarningUI;
+import ui.Frames.LoginRemainingCntr;
 import ui.listeners.MouseActionListener;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
+import java.util.Observable;
+import java.util.Observer;
 
 public class UserLoginUI extends JFrame {
     private JLabel entrancenotion;
 
-    private JLabel remainingattemptnotice;
+    private LoginRemainingCntr loginRemainingCntr = new LoginRemainingCntr();
 
     private JLabel usernamelable;
     private JTextField usernametextfield;
     private JLabel passwordlable;
     private JPasswordField passwordtextfield;
     private JButton userloginbtn;
-    private int remainingattempts=3;
 
     private JLabel signup;
     private JTextField newusername;
@@ -46,7 +48,7 @@ public class UserLoginUI extends JFrame {
         j11.add(passwordtextfield);
         j1.add(j11);
         j1.add(userloginbtn);
-        j1.add(remainingattemptnotice);
+        j1.add(loginRemainingCntr.remainingattemptnotice);
 
         j2.add(signup);
         j22.add(newusernamelabel);
@@ -83,10 +85,8 @@ public class UserLoginUI extends JFrame {
                         dispose();
                     }
                     else{
-                        remainingattempts--;
-                        remainingattemptnotice.setText("Wrong! You have "+remainingattempts+" attempts remaining.");
-                        if(remainingattempts==0) {
-                            remainingattemptnotice.setText("Quit");
+                        loginRemainingCntr.AttemptsFailureResponse();
+                        if(loginRemainingCntr.remainingattempts==0){
                             dispose();
                         }
                     }
@@ -125,13 +125,15 @@ public class UserLoginUI extends JFrame {
         });
     }
 
+
+
     public UserLoginUI(){
         this.setTitle("Enter Username and Password");
         this.setLayout(new BorderLayout());
         passwordtextfield = new JPasswordField(10);
         usernametextfield = new JTextField(10);
         usernamelable = new JLabel("Username");
-        remainingattemptnotice = new JLabel();
+        loginRemainingCntr.remainingattemptnotice = new JLabel();
         entrancenotion = new JLabel("To login, you need to input username and corresponding password in 3 times");
         passwordlable = new JLabel("Password");
         userloginbtn = new JButton("UserLogin");

@@ -1,5 +1,6 @@
 package ui.adminui;
 
+import ui.Frames.LoginRemainingCntr;
 import ui.listeners.KeyboardActionListener;
 import ui.listeners.MouseActionListener;
 
@@ -7,23 +8,24 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
+import java.util.Observable;
+import java.util.Observer;
 
 public class AdminLoginUI extends JFrame {
     private static final String password = "admin";
+    private final LoginRemainingCntr loginRemainingCntr = new LoginRemainingCntr();
     private JLabel entrancenotion =new JLabel("Welcome! You need to input admin password in 3 times");
-    private JLabel remainingattemptnotice;
     private JPasswordField inputtextfield=new JPasswordField(15);
     private JButton adminbtn=new JButton("AdminLogin");
-    private int remainingattempts=3;
 
     private void makeBasicLayout(){
         Container cp = getContentPane();
         cp.setLayout(new FlowLayout());   // The content-pane sets its layout
-        remainingattemptnotice=new JLabel("You have "+remainingattempts+" attempts remaining.");
+        loginRemainingCntr.remainingattemptnotice = new JLabel("You have " + loginRemainingCntr.remainingattempts + " attempts remaining.");
         cp.add(entrancenotion);
         cp.add(inputtextfield);
         cp.add(adminbtn);
-        cp.add(remainingattemptnotice);
+        cp.add(loginRemainingCntr.remainingattemptnotice);
     }
 
 
@@ -31,18 +33,7 @@ public class AdminLoginUI extends JFrame {
         adminbtn.addMouseListener(new MouseActionListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                if(isAdmin(new String(inputtextfield.getPassword()))){
-                    remainingattemptnotice.setText("Correct Password");
-                    new AdminOperationUI();
-                }
-                else{
-                    remainingattempts--;
-                    remainingattemptnotice.setText("Wrong! You have "+remainingattempts+" attempts remaining.");
-                    if(remainingattempts==0) {
-                        remainingattemptnotice.setText("Quit");
-                        dispose();
-                    }
-                }
+                verify();
             }
         });
         inputtextfield.addKeyListener(new KeyboardActionListener() {
@@ -50,21 +41,23 @@ public class AdminLoginUI extends JFrame {
             public void keyPressed(KeyEvent e) {
                 int k = e.getKeyCode();
                 if(k == KeyEvent.VK_ENTER){
-                    if(isAdmin(new String(inputtextfield.getPassword()))){
-                        remainingattemptnotice.setText("Correct Password");
-                        new AdminOperationUI();
-                    }
-                    else{
-                        remainingattempts--;
-                        remainingattemptnotice.setText("Wrong! You have "+remainingattempts+" attempts remaining.");
-                        if(remainingattempts==0) {
-                            remainingattemptnotice.setText("Quit");
-                            dispose();
-                        }
-                    }
+                    verify();
                 }
             }
         });
+    }
+
+    private void verify() {
+        if(isAdmin(new String(inputtextfield.getPassword()))){
+            loginRemainingCntr.remainingattemptnotice.setText("Correct Password");
+            new AdminOperationUI();
+        }
+        else{
+            loginRemainingCntr.AttemptsFailureResponse();
+            if(loginRemainingCntr.remainingattempts==0){
+                dispose();
+            }
+        }
     }
 
     public AdminLoginUI(){

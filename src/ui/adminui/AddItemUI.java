@@ -88,6 +88,7 @@ public class AddItemUI extends JFrame{
                         if(a<=0){
                             throw new NumberFormatException();
                         }
+
                         PublicationOperationCenter operationCenter = PublicationOperationCenter.getInstance();
                         if(operationCenter.addItem(itemnmtext.getText(), isbntext.getText(), authortext.getText(),a,bkbtn.isSelected())){
                             JOptionPane.showMessageDialog(null, "added!");

@@ -5,40 +5,52 @@ import exception.borrowexception.NoDuplicateLoanException;
 import model.publication.Publication;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class BorrowingInfo {
-    public static final int MAXMUM = 5;
-    private HashMap<Publication, LocalDate> currentitems=new HashMap<>();
-    private HashMap<Publication, LocalDate> historyitems=new HashMap<>();
-    private HashMap<Publication, LocalDate> reserveditems=new HashMap<>();
+    private static final int MAXMUM = 5;
+    public final static long daystoloan = 30;
+    private HashMap<String, PublicationLocalDateTuple<Publication,LocalDate>> currentitemsborrowlog =new HashMap<>();
+    private HashMap<String, PublicationLocalDateTuple<Publication,LocalDate>> currentitemsreturnscheme =new HashMap<>();
+    private HashMap<String, PublicationLocalDateTuple<Publication,LocalDate>> historyitems=new HashMap<>();
+    private HashMap<String, PublicationLocalDateTuple<Publication,LocalDate>> reserveditems=new HashMap<>();
 
 
     public BorrowingInfo() {
     }
 
-    public ArrayList<Publication> getHistoryitems() {
+    public HashMap<String, PublicationLocalDateTuple<Publication, LocalDate>> getCurrentitemsborrowlog() {
+        return currentitemsborrowlog;
+    }
+
+    public HashMap<String, PublicationLocalDateTuple<Publication, LocalDate>> getCurrentitemsreturnscheme() {
+        return currentitemsreturnscheme;
+    }
+
+    public HashMap<String, PublicationLocalDateTuple<Publication, LocalDate>> getHistoryitems() {
         return historyitems;
     }
 
-    public ArrayList<Publication> getCurrentitems() {
-        return currentitems;
+    public HashMap<String, PublicationLocalDateTuple<Publication, LocalDate>> getReserveditems() {
+        return reserveditems;
     }
 
-    public void addItemtoCurrent(Publication item) throws ExceedMaxLoanCreditException, NoDuplicateLoanException {
-        if (currentitems.size() >= MAXMUM) {
+    public void addItemtoCurrent(Publication item, LocalDate borroweddate) throws ExceedMaxLoanCreditException, NoDuplicateLoanException {
+        if (currentitemsborrowlog.size() >= MAXMUM) {
             throw new ExceedMaxLoanCreditException("Exceed max credit");
         }
-        if (currentitems.contains(item))
+        if (currentitemsborrowlog.containsKey(item))
             throw new NoDuplicateLoanException("You cannot make duplicate loan");
-        currentitems.add(item);
+        PublicationLocalDateTuple<Publication,LocalDate> tuple = new PublicationLocalDateTuple<>(item,borroweddate);
+        currentitemsborrowlog.put(item.getIsbn(),tuple);
+        PublicationLocalDateTuple<Publication,LocalDate> tuple2 = new PublicationLocalDateTuple<>(item,borroweddate.plusDays(daystoloan));
+        currentitemsreturnscheme.put(item.getIsbn(),tuple2);
     }
 
-    public void addItemtoReservation(Publication item, Borrower borrower) {
-        if(!reserveditems.contains(item)){
-            reserveditems.add(item);
-            item.addReserver(borrower);
+    public void addItemtoReservation(Publication item, LocalDate reserveDate) {
+        if(!reserveditems.containsKey(item.getIsbn())){
+            PublicationLocalDateTuple<Publication,LocalDate> tuple = new PublicationLocalDateTuple<>(item,reserveDate);
+            reserveditems.put(item.getIsbn(),tuple);
         }
     }
 }

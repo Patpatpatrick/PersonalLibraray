@@ -53,12 +53,10 @@ public class PublicationHandler extends DefaultHandler {
 
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
-        System.out.println("now is endelement"+qName);
+        // System.out.println("now is endelement"+qName);
         super.endElement(uri, localName, qName);
-        // TODO: implement this method
         String data = accumulator.toString().trim();
         accumulator.setLength(0);                      // clear accumulator
-        // What are we parsing?
         switch (qName) {
             case "isbook":
                 isbook=Boolean.parseBoolean(data);
@@ -80,24 +78,11 @@ public class PublicationHandler extends DefaultHandler {
             case "remaining":
                 remaining = Integer.parseInt(data);
                 break;
-//            case "sharesinfo":
-//                SharesInfo sharesinfo = new SharesInfo(multiplicity, remaining);
-//                break;
-////            case "webaddress":
-//                try {
-//                    webAddress = new URL(data);
-//                    break;
-//                } catch (MalformedURLException e) {
-//                    throw new SAXException();
-//                    // can't throw PublicationParsingException because the method being override does not throw this exception
-//                    // To throw PublicationParsingException (according to the specification of parseItems() in IResourceParser interface,
-//                    // we first throw SAXException to the caller of this method, and the caller will throw
-//                    // the PublicationParsingException after it catches SAXException (refer to parseItems() defined in
-//                    // PublicationParser class
-//                }
             case "currentborrowername":
                 borrowers.add(BorrowerList.getBorrowerHashMap().get(data));
                 break;
+            case "returndate":
+
             case "reservername":
                 reservers.add(BorrowerList.getBorrowerHashMap().get(data));
                 break;
@@ -115,7 +100,7 @@ public class PublicationHandler extends DefaultHandler {
                 if(borrowers!=null) {
                     for (Borrower b : borrowers) {
                         try {
-                            publication.addCurrentBorrower(b);
+                            publication.getBorrowRegistrationCard().getBorrowlog().put(b);
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -177,24 +162,4 @@ public class PublicationHandler extends DefaultHandler {
     private boolean isAnyFieldOfResourceMissing() {
         return name==null|| isbn ==null|| multiplicity ==0|| authorname ==null;
     }
-//    private Service string2Service(String nameOfService) {
-//        switch (nameOfService) {
-//            case "Shelter":
-//                return Service.SHELTER;
-//            case "Food":
-//                return Service.FOOD;
-//            case "Counselling":
-//                return Service.COUNSELLING;
-//            case "Youth services":
-//                return Service.YOUTH;
-//            case "Senior services":
-//                return Service.SENIOR;
-//            case "Legal advice":
-//                return Service.LEGAL;
-//            default:
-//                return null;
-//        }
-//    }
 }
-
-

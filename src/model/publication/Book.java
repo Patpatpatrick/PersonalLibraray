@@ -3,6 +3,7 @@ package model.publication;
 import model.Borrower.Borrower;
 import observer.ItemReserver;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Book extends Publication {
@@ -21,22 +22,8 @@ public class Book extends Publication {
     */
     private int Pagenum;
 
-    @Override
-    public void addCurrentBorrower(Borrower currentborrower) throws Exception {
-        if(!libraryCard.currentborrowers.contains(currentborrower)){
-            libraryCard.currentborrowers.add(currentborrower);
-            if(!currentborrower.getBorrowingInfo().getCurrentitems().contains(this)){
-                currentborrower.addItemtoCurrent(this);
-            }
-        }
-    }
-
     //  In addition, I tried to add a static field into this class, it stands for the total books that the library possesses.
     // Constructors overloading
-    public Book() {
-       super();
-    }
-
     public Book(String name) {
         super(name);
         isbook=true;
@@ -48,15 +35,20 @@ public class Book extends Publication {
 
     }
 
-    public Book(String name, String isbn, String authorname, SharesInfo shares, ArrayList<Borrower> currentborrower, ArrayList<ItemReserver> reservers) {
-        super(name, isbn, authorname, shares, currentborrower, reservers);
-        isbook=true;
-
-    }
+//    public Book(String name, String isbn, String authorname, SharesInfo shares, ArrayList<Borrower> currentborrower, ArrayList<ItemReserver> reservers) {
+//        super(name, isbn, authorname, shares, currentborrower, reservers);
+//        isbook=true;
+//
+//    }
 
     public Book(String name, String isbn, String authorname, SharesInfo shares) {
         super(name, isbn, authorname, shares);
         isbook=true;
 
+    }
+
+    public Book(String name, String isbn, String authorName, int multiplicity, LocalDate bookimportdate){
+        super(name,isbn,authorName,multiplicity,bookimportdate);
+        isbook = true;
     }
 }

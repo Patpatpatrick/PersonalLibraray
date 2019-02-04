@@ -2,6 +2,7 @@ package ui.Frames.resulttables;
 
 import exception.publicationexception.NonExistException;
 import model.Borrower.Borrower;
+import model.Borrower.PublicationLocalDateTuple;
 import model.publication.Publication;
 import model.publication.PublicationItems;
 import ui.Frames.detailpanel.ItemDetailPanel;
@@ -10,6 +11,7 @@ import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.time.LocalDate;
 import java.util.*;
 
 public class ItemResultTablePanel extends JPanel {
@@ -73,8 +75,13 @@ public class ItemResultTablePanel extends JPanel {
             ArrayList<Publication> itemlist = (ArrayList<Publication>) entry.getValue();
             if(itemlist.size()!=0) {
                 for (Publication a : itemlist) {
-                    if (a.getCurrentborrowers().size() != 0) {
-                        for (Borrower c : a.getCurrentborrowers()) {
+                    if (a.getBorrowRegistrationCard().getBorrowlog().size() != 0) {
+                        HashMap<Borrower,LocalDate> itemlist2=a.getBorrowRegistrationCard().getBorrowlog();
+                        Iterator iter2 = itemlist2.entrySet().iterator();
+                        while (iter2.hasNext()) {
+                            HashMap.Entry entry2 = (HashMap.Entry) iter2.next();
+                            LocalDate itemduedate = (LocalDate) entry2.getValue();
+                            Borrower itemborrower = (Borrower) entry2.getKey();
                             Vector<String> vector = new Vector<String>();
                             vector.add(Integer.toString(i));
                             vector.add(a.getName());
@@ -82,7 +89,8 @@ public class ItemResultTablePanel extends JPanel {
                             vector.add(a.getAuthorName());
                             vector.add(Integer.toString(a.getShares().getMultiplicity()));
                             vector.add(Integer.toString(a.getShares().getRemaining()));
-                            vector.add(c.getNameofbrwr());
+                            vector.add(itemborrower.getNameofbrwr());
+                            vector.add(itemduedate.toString());
                             model.addRow(vector);
                             i++;
                         }
@@ -123,16 +131,22 @@ public class ItemResultTablePanel extends JPanel {
         if(b.size()!=0) {
             int i = 1;
             for (Publication a : b) {
-                if (a.getCurrentborrowers().size() != 0) {
-                    for (Borrower c : a.getCurrentborrowers()) {
+                if (a.getBorrowRegistrationCard().getBorrowlog().size() != 0) {
+                    HashMap<Borrower,LocalDate> itemlist=a.getBorrowRegistrationCard().getBorrowlog();
+                    Iterator iter = itemlist.entrySet().iterator();
+                    while (iter.hasNext()) {
+                        HashMap.Entry entry = (HashMap.Entry) iter.next();
+                        LocalDate itemduedate = (LocalDate) entry.getValue();
+                        Borrower itemborrower = (Borrower) entry.getKey();
                         Vector<String> vector = new Vector<String>();
                         vector.add(Integer.toString(i));
-                        vector.add(s);
+                        vector.add(a.getName());
                         vector.add(a.getIsbn());
                         vector.add(a.getAuthorName());
                         vector.add(Integer.toString(a.getShares().getMultiplicity()));
                         vector.add(Integer.toString(a.getShares().getRemaining()));
-                        vector.add(c.getNameofbrwr());
+                        vector.add(itemborrower.getNameofbrwr());
+                        vector.add(itemduedate.toString());
                         model.addRow(vector);
                         i++;
                     }

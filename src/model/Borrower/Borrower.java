@@ -1,27 +1,25 @@
 package model.Borrower;
+import control.backendcenter.EmailCenter;
 import exception.borrowexception.AlreadyLoanException;
-import exception.borrowexception.ExceedMaxLoanCreditException;
-import exception.borrowexception.NoDuplicateLoanException;
 import model.publication.Publication;
 import observer.ItemReserver;
 
-import java.util.ArrayList;
+import javax.mail.MessagingException;
+import java.time.LocalDate;
+import java.util.HashMap;
 import java.util.Objects;
 
 public class Borrower implements ItemReserver {
     private BorrowingInfo borrowingInfo = new BorrowingInfo();
     private String nameofbrwr;
     private String password;
+    private String email;
 
-    public ArrayList<Publication> getHistoryitems() {
-        return borrowingInfo.getHistoryitems();
-    }
-
-    public Borrower(String nameofbrwr, String passWord) {
+    public Borrower(String nameofbrwr, String passWord, String email) {
+        this.email = email;
         this.nameofbrwr = nameofbrwr;
         this.password = passWord;
-        borrowingInfo.currentitems = new ArrayList<>();
-        borrowingInfo.historyitems = new ArrayList<>();
+        this.email = email;
     }
 
     public BorrowingInfo getBorrowingInfo() {
@@ -40,20 +38,18 @@ public class Borrower implements ItemReserver {
         return password;
     }
 
-    public ArrayList<Publication> getCurrentitems() {
-        return borrowingInfo.getCurrentitems();
-    }
-
-    public void addItemtoCurrent(Publication item) throws Exception {
-        borrowingInfo.addItemtoCurrent(item);
-        if(!item.getCurrentborrowers().contains(this)){
-            item.addCurrentBorrower(this);
+    public void addItemtoCurrent(Publication item,LocalDate borrowdate) throws Exception {
+        borrowingInfo.addItemtoCurrent(item,borrowdate);
+        if(!item.getBorrowRegistrationCard().getBorrowlog().containsKey(this)){
+            item.getBorrowRegistrationCard().addCurrentBorrower(this,borrowdate);
         }
     }
 
-    public void addItemtoReservation(Publication item,Borrower borrower) throws AlreadyLoanException {
-        if(!borrowingInfo.getCurrentitems().contains(item))
-        borrowingInfo.addItemtoReservation(item,this);
+    public void addItemtoReservation(Publication item, LocalDate borrower) throws AlreadyLoanException {
+        if(!borrowingInfo.getCurrentitemsborrowlog().containsKey(item.getIsbn())) {
+            borrowingInfo.addItemtoReservation(item, borrower);
+            item.getReserveRegistrationCard().addReserver(this);
+        }
         else
             throw new AlreadyLoanException("You have already loan this item!");
 
@@ -73,9 +69,13 @@ public class Borrower implements ItemReserver {
     }
 
     @Override
-    public void updateWith(String name, String isbn, int remaining) {
-        System.out.println("An email is sent to me:");
-        System.out.println(name+" "+isbn+"is now available with "+remaining+" shares!");
-        System.out.println("You can go and get it now!!");
+    public void updateWith(String name, String isbn, int remaining) throws MessagingException {
+//        System.out.println("An email is sent to me:");
+//        System.out.println(name+" "+isbn+"is now available with "+remaining+" shares!");
+//        System.out.println("You can go and get it now!!");
+        EmailCenter.getInstance().setMailServerProperties();
+        EmailCenter.getInstance().createEmailMessageToReservers(email,nameofbrwr,name,isbn,remaining);
+//        emailCenter.sendEmail();
     }
+
 }

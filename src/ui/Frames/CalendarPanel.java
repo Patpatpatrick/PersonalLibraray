@@ -55,6 +55,7 @@ public class CalendarPanel extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 paintDay(nowdate);
+
             }
         });
 
@@ -156,7 +157,10 @@ public class CalendarPanel extends JPanel {
         setVisible(true);
     }
 
-    //TODO
+    public LocalDate getSelecteddate() {
+        return selecteddate;
+    }
+
     private void generateDate(int year, int month, int day){
         selecteddate=LocalDate.of(year,month,day);
     }

@@ -32,6 +32,8 @@ public class UserLoginUI extends JFrame {
     private JLabel newpasswordlable;
     private JPasswordField confirmpassword;
     private JLabel confirmpasswordlabel;
+    private JLabel email;
+    private JTextField newuseremail;
     private JButton signupbtn;
 
     private void makeBasicLayout(){
@@ -57,6 +59,8 @@ public class UserLoginUI extends JFrame {
         j22.add(newpassword);
         j22.add(confirmpasswordlabel);
         j22.add(confirmpassword);
+        j22.add(email);
+        j22.add(newuseremail);
         j2.add(j22);
         j2.add(signupbtn);
 
@@ -99,6 +103,7 @@ public class UserLoginUI extends JFrame {
                 String signuppassword=new String(newpassword.getPassword());
                 String confirmsignuppassword=new String(confirmpassword.getPassword());
                 String enteredusername=newusername.getText();
+                String emailaddress=newuseremail.getText();
 
                 if(enteredusername.equals("")||signuppassword.equals("")||confirmsignuppassword.equals(""))
                     JOptionPane.showMessageDialog(null,
@@ -113,7 +118,7 @@ public class UserLoginUI extends JFrame {
                 else{
                     OperationCenter operationCenter=PublicationOperationCenter.getInstance();
                     try {
-                        operationCenter.addBorrower(enteredusername,signuppassword);
+                        operationCenter.addBorrower(enteredusername,signuppassword,emailaddress);
                         new UserOpeUI(BorrowerList.getBorrowerHashMap().get(enteredusername));
                         dispose();
                     } catch (IOException e1) {
@@ -144,6 +149,8 @@ public class UserLoginUI extends JFrame {
         newpasswordlable = new JLabel("Input Password");
         confirmpassword = new JPasswordField(10);
         confirmpasswordlabel = new JLabel("Confirm you password");
+        email = new JLabel("Please input your email");
+        newuseremail = new JTextField(20);
         signupbtn = new JButton("SignUP");
         makeBasicLayout();
         eventSources();

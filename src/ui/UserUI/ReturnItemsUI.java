@@ -41,9 +41,10 @@ public class ReturnItemsUI extends JFrame{
         confirm.addMouseListener(new MouseActionListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                int num= Integer.parseInt((String)itemResultTablePanel.getTable().getValueAt(itemResultTablePanel.getTable().getSelectedRow(), 0));
                 try {
-                    PublicationOperationCenter.getInstance().returnBook(borrowerinoperation,num);
+                    String returnedbookname= (String)itemResultTablePanel.getTable().getValueAt(itemResultTablePanel.getTable().getSelectedRow(), 1);
+                    String returnedbookisbn= (String)itemResultTablePanel.getTable().getValueAt(itemResultTablePanel.getTable().getSelectedRow(), 2);
+                    PublicationOperationCenter.getInstance().returnBook(borrowerinoperation,returnedbookname);
                     JOptionPane.showMessageDialog(null, "Return Successfully");
                     itemResultTablePanel.showItemsInTable();
                 }

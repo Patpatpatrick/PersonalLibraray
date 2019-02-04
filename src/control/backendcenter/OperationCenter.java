@@ -46,21 +46,21 @@ public abstract class OperationCenter implements PublicationModule, UserModule {
         throw new NonExistException("There is no such user");
     }
     @Override
-    public boolean addBorrower(String username, String userpassword) throws IOException {
-        Borrower newBorrower= new Borrower(username,userpassword);
+    public boolean addBorrower(String username, String userpassword, String Email) throws IOException {
+        Borrower newBorrower= new Borrower(username,userpassword,Email);
         if(BorrowerList.getBorrowerHashMap().containsKey(username)){
             throw new NoDuplicateUserName("You are trying to add duplicate username.");
         }
         BorrowerList.getBorrowerHashMap().put(username,newBorrower);
         System.out.println("Borrower added successfully!");
-        saveBorrowerLog(username,userpassword);
+        saveBorrowerLog(username,userpassword,Email);
         return true;
     }
     @Override
-    public void saveBorrowerLog(String username, String password) throws IOException {
+    public void saveBorrowerLog(String username, String password, String Email) throws IOException {
         List<String> lines = Files.readAllLines(Paths.get("borrowerlog.txt"));;
         PrintWriter brwrwriter = new PrintWriter("borrowerlog.txt","UTF-8");
-        lines.add(username+","+password);
+        lines.add(username+","+password+","+Email);
         for(String line:lines){
             brwrwriter.println(line);
         }

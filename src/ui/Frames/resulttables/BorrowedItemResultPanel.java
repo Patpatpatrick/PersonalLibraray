@@ -1,6 +1,7 @@
 package ui.Frames.resulttables;
 
 import model.Borrower.Borrower;
+import model.Borrower.PublicationLocalDateTuple;
 import model.publication.Publication;
 import model.publication.PublicationItems;
 import ui.Frames.detailpanel.ItemDetailPanel;
@@ -9,6 +10,7 @@ import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -72,26 +74,29 @@ public class BorrowedItemResultPanel extends JPanel {
         model.setColumnIdentifiers(columns);
         table.setModel(model);
         table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-        JScrollPane pane = new JScrollPane(table);
+        JScrollPane pane=new JScrollPane(table);
         pane.setPreferredSize(new Dimension(800,400));
-
         panelfortable.add(pane);
-        ArrayList<Publication> itemlist=borrowerinoprtn.getBorrowingInfo().getCurrentitems();
-            if(itemlist.size()!=0) {
-                int i=1;
-                for (Publication a : itemlist) {
-                    Vector<String> vector = new Vector<String>();
-                    vector.add(Integer.toString(i));
-                    vector.add(a.getName());
-                    vector.add(a.getIsbn());
-                    vector.add(a.getAuthorName());
-                    vector.add(Integer.toString(a.getShares().getMultiplicity()));
-                    vector.add(Integer.toString(a.getShares().getRemaining()));
-                    model.addRow(vector);
-                    i++;
-                }
-            }
-
+        HashMap<String,PublicationLocalDateTuple<Publication,LocalDate>> itemlist=borrowerinoprtn.getBorrowingInfo().getCurrentitemsborrowlog();
+        Iterator iter = itemlist.entrySet().iterator();
+        int i = 1;
+        while (iter.hasNext()) {
+            HashMap.Entry entry = (HashMap.Entry) iter.next();
+            PublicationLocalDateTuple<Publication,LocalDate> itemtuple = (PublicationLocalDateTuple<Publication,LocalDate>) entry.getValue();
+            Publication a = itemtuple.getFirst();
+            LocalDate date = itemtuple.getSecond();
+            Vector<String> vector = new Vector<String>();
+            vector.add(Integer.toString(i));
+            vector.add(a.getName());
+            vector.add(a.getIsbn());
+            vector.add(a.getAuthorName());
+            vector.add(Integer.toString(a.getShares().getMultiplicity()));
+            vector.add(Integer.toString(a.getShares().getRemaining()));
+            vector.add(borrowerinoprtn.getNameofbrwr());
+            vector.add(date.toString());
+            model.addRow(vector);
+            i++;
+        }
         revalidate();
         setVisible(true);
     }

@@ -9,6 +9,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class AddItemUI extends JFrame{
 
@@ -85,12 +86,14 @@ public class AddItemUI extends JFrame{
                 else {
                     try {
                         int a = Integer.parseInt(multitextfield.getText());
+
                         if(a<=0){
                             throw new NumberFormatException();
                         }
-
+                        LocalDate bookimportdate = (LocalDate) calendarui.getSelecteddate();
                         PublicationOperationCenter operationCenter = PublicationOperationCenter.getInstance();
-                        if(operationCenter.addItem(itemnmtext.getText(), isbntext.getText(), authortext.getText(),a,bkbtn.isSelected())){
+                        if(operationCenter.addItem(itemnmtext.getText(), isbntext.getText(), authortext.getText(),a,bkbtn.isSelected(),bookimportdate
+                        )){
                             JOptionPane.showMessageDialog(null, "added!");
                         }
                     } catch (NumberFormatException inputerror) {

@@ -2,30 +2,33 @@ package model.publication;
 
 import exception.publicationexception.NegRemainingException;
 import exception.publicationexception.RemainingExceedMultiException;
-import model.Borrower.Borrower;
-import observer.ItemReserver;
 
-import java.util.ArrayList;
+import java.time.LocalDate;
 import java.util.Objects;
 
-public abstract class Publication extends RsvSubject {
-    private LibraryCard libraryCard = new LibraryCard();
+public abstract class Publication {
+
+
+
+    private ReserveRegistrationCard reserveRegistrationCard;
+    private BorrowRegistrationCard borrowRegistrationCard;
     private String name, isbn, authorname;
     private SharesInfo shares;
 
     protected boolean isbook;
 
-    abstract public void addCurrentBorrower(Borrower currentborrower) throws Exception;
-
     Publication() {
         name ="Unknown";
         isbn ="Unknown";
         shares =new SharesInfo(1);
+        borrowRegistrationCard = new BorrowRegistrationCard(LocalDate.now());
+        reserveRegistrationCard = new ReserveRegistrationCard();
     }
 
     Publication(String name) {
         this.name = name;
         shares =new SharesInfo(1);
+        borrowRegistrationCard = new BorrowRegistrationCard(LocalDate.now());
     }
 
     Publication(String name, String isbn, String authorName, int multiplicity) {
@@ -33,22 +36,33 @@ public abstract class Publication extends RsvSubject {
         this.isbn = isbn;
         authorname = authorName;
         shares =new SharesInfo(multiplicity);
+        borrowRegistrationCard = new BorrowRegistrationCard(LocalDate.now());
     }
 
-    public Publication(String name, String isbn, String authorname, SharesInfo shares, ArrayList<Borrower> currentborrowers, ArrayList<ItemReserver> reservers) {
-        this.name = name;
-        this.isbn = isbn;
-        this.authorname = authorname;
-        this.shares = shares;
-        this.libraryCard.currentborrowers = currentborrowers;
-        super.reservers=reservers;
-    }
+
+//    public Publication(String name, String isbn, String authorname, SharesInfo shares, ArrayList<Borrower> currentborrowers, ArrayList<ItemReserver> reservers) {
+//        this.name = name;
+//        this.isbn = isbn;
+//        this.authorname = authorname;
+//        this.shares = shares;
+//        this.borrowRegistrationCard.currentborrowers = currentborrowers;
+//        super.reservers=reservers;
+//    }
 
     public Publication(String name, String isbn, String authorname, SharesInfo shares) {
         this.name = name;
         this.isbn = isbn;
         this.authorname = authorname;
         this.shares = shares;
+        borrowRegistrationCard = new BorrowRegistrationCard(LocalDate.now());
+    }
+
+    Publication(String name, String isbn, String authorName, int multiplicity, LocalDate itemimportdate) {
+        this.name = name;
+        this.isbn = isbn;
+        authorname = authorName;
+        shares =new SharesInfo(multiplicity);
+        borrowRegistrationCard = new BorrowRegistrationCard(itemimportdate);
     }
 
     public SharesInfo getShares() {
@@ -69,6 +83,13 @@ public abstract class Publication extends RsvSubject {
 
     public String getAuthorName() {
         return authorname;
+    }
+
+    public BorrowRegistrationCard getBorrowRegistrationCard() {
+        return borrowRegistrationCard;
+    }
+    public ReserveRegistrationCard getReserveRegistrationCard() {
+        return reserveRegistrationCard;
     }
 
     public boolean isIsbook() {
@@ -103,4 +124,5 @@ public abstract class Publication extends RsvSubject {
     public void remainingIncre() throws RemainingExceedMultiException {
         shares.remainingIncre();
     }
+
 }

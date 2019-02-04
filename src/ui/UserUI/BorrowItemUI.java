@@ -80,8 +80,4 @@ public class BorrowItemUI extends JFrame{
             }
         });
     }
-
-    public static void main(String[] args) {
-        new BorrowItemUI(new Borrower("12sd","22"));
-    }
 }

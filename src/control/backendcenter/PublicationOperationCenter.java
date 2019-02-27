@@ -32,7 +32,10 @@ public class PublicationOperationCenter extends OperationCenter {
         return instance;
     }
 
+    @Override
+    protected void five(){
 
+    }
     //MODIFIES:this
     //EFFECTS: add a book into the library with only name
     @Override

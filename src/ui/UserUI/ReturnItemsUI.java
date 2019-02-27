@@ -9,6 +9,7 @@ import ui.Frames.resulttables.BorrowerResultTablePanel;
 import ui.Frames.resulttables.ItemResultTablePanel;
 import ui.listeners.MouseActionListener;
 
+import javax.mail.MessagingException;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -43,12 +44,12 @@ public class ReturnItemsUI extends JFrame{
             public void mouseClicked(MouseEvent e) {
                 try {
                     String returnedbookname= (String)itemResultTablePanel.getTable().getValueAt(itemResultTablePanel.getTable().getSelectedRow(), 1);
-                    String returnedbookisbn= (String)itemResultTablePanel.getTable().getValueAt(itemResultTablePanel.getTable().getSelectedRow(), 2);
+                    //String returnedbookisbn= (String)itemResultTablePanel.getTable().getValueAt(itemResultTablePanel.getTable().getSelectedRow(), 2);
                     PublicationOperationCenter.getInstance().returnBook(borrowerinoperation,returnedbookname);
                     JOptionPane.showMessageDialog(null, "Return Successfully");
                     itemResultTablePanel.showItemsInTable();
                 }
-                catch (RemainingExceedMultiException e1) {
+                catch (RemainingExceedMultiException | MessagingException e1) {
                     e1.printStackTrace();
                 }
             }

@@ -12,7 +12,7 @@ public abstract class Publication {
 
     private ReserveRegistrationCard reserveRegistrationCard;
     private BorrowRegistrationCard borrowRegistrationCard;
-    private String name, isbn, authorname;
+    protected String name, isbn, authorname;
     private SharesInfo shares;
 
     protected boolean isbook;

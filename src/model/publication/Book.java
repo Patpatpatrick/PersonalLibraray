@@ -51,4 +51,7 @@ public class Book extends Publication {
         super(name,isbn,authorName,multiplicity,bookimportdate);
         isbook = true;
     }
+    public void ten(){
+        System.out.println(name);
+    }
 }

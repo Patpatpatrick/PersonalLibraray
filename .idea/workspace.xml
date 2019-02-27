@@ -2,96 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a278e7dc-12ca-4e87-80be-cd380cc9ce26" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/activation.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mail.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/control/backendcenter/EmailCenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exception/createuserexception/UnverifiedEmail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Borrower/PublicationLocalDateTuple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/publication/BorrowRegistrationCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/publication/ReserveRegistrationCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMG_4577.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalLibrary.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalLibrary.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/control/backendcenter/OperationCenter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/control/backendcenter/PublicationModule.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/control/backendcenter/PublicationOperationCenter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/control/backendcenter/UserModule.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/control/frontcenter/LibraryFrontCenter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/control/frontcenter/PublicationHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/control/frontcenter/PublicationParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/exception/createuserexception/NoDuplicateUserName.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/exception/loginexception/FailedAttemptSpillOverException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/exception/parsingexception/BorrowerParsingException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/exception/publicationexception/NonExistException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/model/Borrower/Borrower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PersonalLibrary/model/Borrower/Borrower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/model/Borrower/BorrowerList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/model/Borrower/BorrowingInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PersonalLibrary/model/Borrower/BorrowingInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/model/ReadWebPageEx.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/model/publication/Book.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/model/publication/CD.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/borrowerlog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/borrowerlog.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/model/publication/Publication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PersonalLibrary/model/publication/Publication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/model/publication/RsvSubject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PersonalLibrary/model/publication/RsvSubject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/observer/ItemReserver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PersonalLibrary/observer/ItemReserver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/Frames/CalendarPanel$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/Frames/CalendarPanel$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/Frames/CalendarPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/Frames/SearchButtonCombinationPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/Frames/SearchByBorrowerPanel$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/Frames/SearchByBorrowerPanel$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/Frames/SearchByBorrowerPanel$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/Frames/SearchByBorrowerPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/Frames/SearchByItemsPanel$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/Frames/SearchByItemsPanel$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/Frames/SearchByItemsPanel$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/Frames/SearchByItemsPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/Frames/resulttables/BorrowedItemResultPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/Frames/resulttables/BorrowerResultTablePanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/Frames/resulttables/ItemResultTablePanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/UserUI/BorrowItemUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/UserUI/BorrowItemUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/UserUI/DisplayBorrowedItemsUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/UserUI/ReturnItemsUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/UserUI/ReturnItemsUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/UserUI/UserLoginUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/UserUI/UserLoginUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/UserUI/UserLoginUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/UserUI/UserLoginUI$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/UserUI/UserLoginUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/UserUI/UserLoginUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/adminui/AddItemUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/adminui/AddItemUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/adminui/ManageBorrowerUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/adminui/ManagePublicationPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/runlibraryui/RunlibGUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/runlibraryui/RunlibGUI$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/runlibraryui/RunlibGUI$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/runlibraryui/RunlibGUI$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/runlibraryui/RunlibGUI$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/runlibraryui/RunlibGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PersonalLibrary/ui/runlibraryui/VisitorBrowsingPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/control/backendcenter/CDOperationCenter.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/control/backendcenter/OperationCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/backendcenter/OperationCenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/control/backendcenter/PublicationModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/backendcenter/PublicationModule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/control/backendcenter/PublicationOperationCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/backendcenter/PublicationOperationCenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/control/backendcenter/UserModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/backendcenter/UserModule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/control/frontcenter/LibraryFrontCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/frontcenter/LibraryFrontCenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/control/frontcenter/PublicationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/frontcenter/PublicationHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Borrower/Borrower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Borrower/Borrower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Borrower/BorrowerList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Borrower/BorrowerList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Borrower/BorrowingInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Borrower/BorrowingInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/control/frontcenter/PublicationParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/frontcenter/PublicationParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ReadWebPageEx.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/publication/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/publication/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/publication/CD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/publication/CD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/publication/LibraryCard.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/publication/Publication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/publication/Publication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/publication/RsvSubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/publication/RsvSubject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/observer/ItemReserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/observer/ItemReserver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/Frames/CalendarPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Frames/CalendarPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Frames/resulttables/BorrowedItemResultPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Frames/resulttables/BorrowedItemResultPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Frames/resulttables/BorrowerResultTablePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Frames/resulttables/BorrowerResultTablePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Frames/resulttables/ItemResultTablePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Frames/resulttables/ItemResultTablePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/UserUI/BorrowItemUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/UserUI/BorrowItemUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Frames/WarningUI.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/UserUI/ReturnItemsUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/UserUI/ReturnItemsUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/UserUI/UserLoginUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/UserUI/UserLoginUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/adminui/AddItemUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/adminui/AddItemUI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -103,35 +28,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/control/backendcenter/PublicationOperationCenter.java">
+        <entry file="file://$PROJECT_DIR$/src/control/frontcenter/LibraryFrontCenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="173" column="62" selection-start-line="173" selection-start-column="62" selection-end-line="173" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ui/Frames/resulttables/BorrowedItemResultPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="98" column="9" lean-forward="true" selection-start-line="79" selection-start-column="8" selection-end-line="98" selection-end-column="9" />
+            <state relative-caret-position="113">
+              <caret line="45" column="10" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
               <folding>
-                <element signature="e#4718#4719#0" expanded="true" />
-                <element signature="e#4746#4747#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/publication/BorrowRegistrationCard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
-              <folding>
-                <element signature="e#959#960#0" expanded="true" />
-                <element signature="e#991#992#0" expanded="true" />
+                <element signature="e#895#896#0" expanded="true" />
+                <element signature="e#926#927#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -140,8 +43,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ui/UserUI/ReturnItemsUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="46" column="108" selection-start-line="46" selection-start-column="108" selection-end-line="46" selection-end-column="108" />
+            <state relative-caret-position="260">
+              <caret line="36" column="24" lean-forward="true" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ui/runlibraryui/VisitorBrowsingPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -149,56 +61,72 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/control/frontcenter/PublicationHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1482">
-              <caret line="164" column="1" selection-start-line="164" selection-start-column="1" selection-end-line="164" selection-end-column="1" />
+            <state relative-caret-position="142">
+              <caret line="35" column="30" lean-forward="true" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+              <folding>
+                <element signature="e#1082#1083#0" expanded="true" />
+                <element signature="e#1131#1132#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/control/frontcenter/PublicationParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="46" column="47" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ui/runlibraryui/RunlibGUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="104" column="25" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ui/adminui/AdminLoginUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="15" column="36" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ui/Frames/LoginRemainingCntr.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/control/frontcenter/PublicationParser.java">
+        <entry file="file://$PROJECT_DIR$/src/ui/Frames/CalendarPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-498">
-              <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+            <state relative-caret-position="-656">
+              <caret line="88" column="17" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Items.xml">
+        <entry file="file://$PROJECT_DIR$/src/model/publication/PublicationItems.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="6" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ui/Frames/resulttables/BorrowerResultTablePanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1238">
-              <caret line="126" column="98" selection-start-line="126" selection-start-column="98" selection-end-line="126" selection-end-column="98" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ui/Frames/resulttables/ItemResultTablePanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="81" column="48" selection-start-line="81" selection-start-column="42" selection-end-line="81" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/Borrower/BorrowerList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+            <state relative-caret-position="90">
+              <caret line="9" column="76" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="76" />
               <folding>
-                <element signature="e#254#255#0" expanded="true" />
-                <element signature="e#292#293#0" expanded="true" />
+                <element signature="e#333#334#0" expanded="true" />
+                <element signature="e#374#375#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -221,19 +149,15 @@
       <list>
         <option value="$PROJECT_DIR$/src/ui/adminui/AdminLoginUI.java" />
         <option value="$PROJECT_DIR$/src/ui/Frames/LoginRemainingCntr.java" />
-        <option value="$PROJECT_DIR$/src/ui/Frames/CalendarPanel.java" />
         <option value="$PROJECT_DIR$/src/ui/adminui/AddItemUI.java" />
         <option value="$PROJECT_DIR$/src/control/backendcenter/PublicationModule.java" />
         <option value="$PROJECT_DIR$/src/model/publication/LibraryCard.java" />
-        <option value="$PROJECT_DIR$/src/model/publication/Book.java" />
         <option value="$PROJECT_DIR$/src/model/publication/CD.java" />
         <option value="$PROJECT_DIR$/src/model/Borrower/SendEmail.java" />
         <option value="$PROJECT_DIR$/src/ui/UserUI/BorrowItemUI.java" />
         <option value="$PROJECT_DIR$/src/control/backendcenter/UserModule.java" />
-        <option value="$PROJECT_DIR$/src/control/backendcenter/OperationCenter.java" />
         <option value="$PROJECT_DIR$/src/exception/createuserexception/UnverifiedEmail.java" />
         <option value="$PROJECT_DIR$/src/model/publication/ItemRegistrationCard.java" />
-        <option value="$PROJECT_DIR$/src/model/publication/Publication.java" />
         <option value="$PROJECT_DIR$/src/model/Borrower/TripleletBorringInfo.java" />
         <option value="$PROJECT_DIR$/src/model/Borrower/Triplet.java" />
         <option value="$PROJECT_DIR$/src/model/Borrower/ISBNLocalDateTuple.java" />
@@ -242,7 +166,6 @@
         <option value="$PROJECT_DIR$/src/model/Borrower/BorrowingInfo.java" />
         <option value="$PROJECT_DIR$/src/model/publication/RsvSubject.java" />
         <option value="$PROJECT_DIR$/src/control/backendcenter/JavaEmail.java" />
-        <option value="$PROJECT_DIR$/src/control/frontcenter/LibraryFrontCenter.java" />
         <option value="$PROJECT_DIR$/src/control/backendcenter/EmailCenter.java" />
         <option value="$PROJECT_DIR$/src/model/Borrower/Borrower.java" />
         <option value="$PROJECT_DIR$/src/ui/UserUI/UserLoginUI.java" />
@@ -251,9 +174,15 @@
         <option value="$PROJECT_DIR$/src/ui/Frames/resulttables/BorrowedItemResultPanel.java" />
         <option value="$PROJECT_DIR$/src/ui/Frames/resulttables/BorrowerResultTablePanel.java" />
         <option value="$PROJECT_DIR$/src/ui/Frames/resulttables/ItemResultTablePanel.java" />
-        <option value="$PROJECT_DIR$/src/ui/UserUI/ReturnItemsUI.java" />
+        <option value="$PROJECT_DIR$/src/control/backendcenter/OperationCenter.java" />
         <option value="$PROJECT_DIR$/src/control/backendcenter/PublicationOperationCenter.java" />
+        <option value="$PROJECT_DIR$/src/model/publication/Book.java" />
+        <option value="$PROJECT_DIR$/src/model/publication/Publication.java" />
         <option value="$PROJECT_DIR$/src/control/frontcenter/PublicationHandler.java" />
+        <option value="$PROJECT_DIR$/src/control/frontcenter/PublicationParser.java" />
+        <option value="$PROJECT_DIR$/src/ui/UserUI/ReturnItemsUI.java" />
+        <option value="$PROJECT_DIR$/src/control/frontcenter/LibraryFrontCenter.java" />
+        <option value="$PROJECT_DIR$/src/ui/Frames/CalendarPanel.java" />
       </list>
     </option>
   </component>
@@ -270,6 +199,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -313,41 +243,6 @@
               <item name="PersonalLibrary" type="b2602c69:ProjectViewProjectNode" />
               <item name="PersonalLibrary" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
-              <item name="borrowexception" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PersonalLibrary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PersonalLibrary" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
-              <item name="createuserexception" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PersonalLibrary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PersonalLibrary" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
-              <item name="loginexception" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PersonalLibrary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PersonalLibrary" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
-              <item name="parsingexception" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PersonalLibrary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PersonalLibrary" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
-              <item name="publicationexception" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PersonalLibrary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PersonalLibrary" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -363,6 +258,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
               <item name="publication" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PersonalLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PersonalLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="observer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PersonalLibrary" type="b2602c69:ProjectViewProjectNode" />
@@ -423,13 +324,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548837828019" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551308666520" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -503,17 +403,22 @@
       <workItem from="1547366057393" duration="22455000" />
       <workItem from="1547710305983" duration="1858000" />
       <workItem from="1548735314096" duration="4786000" />
+      <workItem from="1549262672670" duration="1233000" />
+      <workItem from="1549441814180" duration="1476000" />
+      <workItem from="1549902349548" duration="761000" />
+      <workItem from="1550027796780" duration="516000" />
+      <workItem from="1550215777517" duration="596000" />
+      <workItem from="1551305820415" duration="2891000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29099000" />
+    <option name="totallyTimeSpent" value="36572000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2786753" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30613893" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -522,16 +427,16 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329927" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.047468353" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.045255475" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Duplicate detector" order="7" weight="0.32911393" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.04379562" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.07445256" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.04379562" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.27445257" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -548,129 +453,39 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ui/runlibraryui/RunlibGUI.java</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="LibraryFrontCenter.getInstance()" language="JAVA" />
+        <watch expression="PublicationHashMap" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>PublicationHashMap</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>LibraryFrontCenter.getInstance()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/javafx.base/javafx/beans/Observable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/adminui/AdminLoginUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="58" column="13" selection-start-line="56" selection-start-column="12" selection-end-line="58" selection-end-column="13" />
-          <folding>
-            <element signature="e#1073#1225#0" expanded="true" />
-            <element signature="e#1224#1225#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/Frames/LoginRemainingCntr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/adminui/AddItemUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="94" column="149" selection-start-line="94" selection-start-column="149" selection-end-line="94" selection-end-column="149" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/control/backendcenter/CDOperationCenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#6262#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/URLxmlexample.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/control/backendcenter/PublicationModule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/time/LocalDate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="139" column="78" selection-start-line="139" selection-start-column="78" selection-end-line="139" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/ReadWebPageEx.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/publication/CD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Borrower/SendEmail.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/LibraryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-746">
-          <folding>
-            <element signature="e#0#2870#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/Runlib.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#6925#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IMG_4577.JPG" />
-    <entry file="file://$PROJECT_DIR$/1600px-Herjangsfjorden_&amp;_Ofotfjorden,_wide,_2009_09.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/Frames/CalendarPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="159" column="10" selection-start-line="159" selection-start-column="10" selection-end-line="159" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/control/backendcenter/UserModule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="70" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exception/createuserexception/NoDuplicateUserName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/exception/createuserexception/UnverifiedEmail.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -685,38 +500,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/adminui/ManagePublicationPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/publication/PublicationItems.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="76" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="138" column="50" selection-start-line="138" selection-start-column="50" selection-end-line="138" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/publication/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/publication/Publication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
-          <caret line="92" column="5" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -734,52 +521,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/observer/ItemReserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/control/backendcenter/EmailCenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/control/backendcenter/OperationCenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/publication/ReserveRegistrationCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/control/frontcenter/LibraryFrontCenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3240">
-          <caret line="240" column="16" selection-start-line="240" selection-start-column="16" selection-end-line="240" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/UserUI/UserLoginUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1605">
           <caret line="119" column="25" selection-start-line="119" selection-start-column="25" selection-end-line="119" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/runlibraryui/RunlibGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -810,6 +555,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/Frames/resulttables/BorrowedItemResultPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="98" column="9" selection-start-line="79" selection-start-column="8" selection-end-line="98" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/control/backendcenter/EmailCenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/control/backendcenter/UserModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="70" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/Frames/resulttables/BorrowerResultTablePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1665">
+          <caret line="126" column="98" selection-start-line="126" selection-start-column="98" selection-end-line="126" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Borrower/BorrowerList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -818,6 +591,132 @@
             <element signature="e#254#255#0" expanded="true" />
             <element signature="e#292#293#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exception/borrowexception/AlreadyLoanException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exception/borrowexception/BorrowUnsuccessfulException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exception/createuserexception/NoDuplicateUserName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/publication/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+          <folding>
+            <element signature="e#1926#1927#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/publication/CD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/publication/ReserveRegistrationCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+          <folding>
+            <element signature="e#340#341#0" expanded="true" />
+            <element signature="e#372#373#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/publication/SharesInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/adminui/AddItemUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/adminui/AdminOperationUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/adminui/ManageBorrowerUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/adminui/ManagePublicationPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/Frames/detailpanel/ItemDetailPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/Frames/OperationChoiceUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/Frames/SearchByBorrowerPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/Frames/SearchButtonCombinationPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/Frames/SearchByItemsPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="82" column="45" lean-forward="true" selection-start-line="82" selection-start-column="45" selection-end-line="82" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/Frames/resulttables/ItemResultTablePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="652">
+          <caret line="111" lean-forward="true" selection-start-line="70" selection-start-column="8" selection-end-line="111" />
         </state>
       </provider>
     </entry>
@@ -832,45 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/Frames/resulttables/BorrowerResultTablePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1238">
-          <caret line="126" column="98" selection-start-line="126" selection-start-column="98" selection-end-line="126" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/Frames/resulttables/BorrowedItemResultPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="98" column="9" lean-forward="true" selection-start-line="79" selection-start-column="8" selection-end-line="98" selection-end-column="9" />
-          <folding>
-            <element signature="e#4718#4719#0" expanded="true" />
-            <element signature="e#4746#4747#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/Frames/resulttables/ItemResultTablePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="81" column="48" selection-start-line="81" selection-start-column="42" selection-end-line="81" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/UserUI/ReturnItemsUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="46" column="108" selection-start-line="46" selection-start-column="108" selection-end-line="46" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/control/backendcenter/PublicationOperationCenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="173" column="62" selection-start-line="173" selection-start-column="62" selection-end-line="173" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Items.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -878,17 +738,146 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/control/frontcenter/PublicationHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/control/backendcenter/CDOperationCenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1482">
-          <caret line="164" column="1" selection-start-line="164" selection-start-column="1" selection-end-line="164" selection-end-column="1" />
+        <state>
+          <folding>
+            <element signature="e#0#6262#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/control/backendcenter/PublicationModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/control/backendcenter/OperationCenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/ReadWebPageEx.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/publication/Publication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/observer/ItemReserver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/control/frontcenter/LibraryLogParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/control/backendcenter/PublicationOperationCenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="138" column="46" selection-start-line="138" selection-start-column="46" selection-end-line="138" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/publication/PublicationItems.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="76" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="76" />
+          <folding>
+            <element signature="e#333#334#0" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/control/frontcenter/PublicationParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-498">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        <state relative-caret-position="154">
+          <caret line="46" column="47" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/control/frontcenter/PublicationHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="35" column="30" lean-forward="true" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+          <folding>
+            <element signature="e#1082#1083#0" expanded="true" />
+            <element signature="e#1131#1132#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/control/frontcenter/LibraryFrontCenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="45" column="10" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
+          <folding>
+            <element signature="e#895#896#0" expanded="true" />
+            <element signature="e#926#927#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/UserUI/ReturnItemsUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="36" column="24" lean-forward="true" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/runlibraryui/VisitorBrowsingPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/runlibraryui/RunlibGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="104" column="25" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/adminui/AdminLoginUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/Frames/LoginRemainingCntr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/Frames/CalendarPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-656">
+          <caret line="88" column="17" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
         </state>
       </provider>
     </entry>

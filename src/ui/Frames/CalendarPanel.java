@@ -54,6 +54,7 @@ public class CalendarPanel extends JPanel {
         button_today.addMouseListener(new MouseActionListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
+
                 paintDay(nowdate);
 
             }

@@ -10,6 +10,7 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 // Handler for XML publication parsing
@@ -21,7 +22,7 @@ public class PublicationHandler extends DefaultHandler {
     private String name;
     private String isbn;
     private String authorname;
-
+    private LocalDate borrowedDate;
     private int multiplicity;
     private int remaining;
 
@@ -82,6 +83,9 @@ public class PublicationHandler extends DefaultHandler {
                 borrowers.add(BorrowerList.getBorrowerHashMap().get(data));
                 break;
             case "returndate":
+                break;
+            case "borrowdate":
+
 
             case "reservername":
                 reservers.add(BorrowerList.getBorrowerHashMap().get(data));
@@ -100,7 +104,7 @@ public class PublicationHandler extends DefaultHandler {
                 if(borrowers!=null) {
                     for (Borrower b : borrowers) {
                         try {
-                            publication.getBorrowRegistrationCard().getBorrowlog().put(b);
+                            publication.getBorrowRegistrationCard().getBorrowlog().put(b,LocalDate.now());
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -109,7 +113,7 @@ public class PublicationHandler extends DefaultHandler {
                 }
                 if(reservers!=null) {
                     for (ItemReserver b : reservers) {
-                        publication.addReserver(b);
+                        publication.getReserveRegistrationCard().getReservelog().add(b);
                     }
                     reservers=new ArrayList<>();
                 }

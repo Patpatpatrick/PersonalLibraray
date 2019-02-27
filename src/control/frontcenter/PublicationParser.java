@@ -141,7 +141,10 @@ public class PublicationParser implements LibraryLogParser {
                     //currentborrowerlist
                     atts.clear();
                     handler.startElement("","","borrowers",atts);
-                        for(Borrower b:a.getCurrentborrowers()){
+                        Iterator borrowerIter = a.getBorrowRegistrationCard().getBorrowlog().entrySet().iterator();
+                        while (borrowerIter.hasNext()) {
+                            HashMap.Entry borrowerEntry = (HashMap.Entry) borrowerIter.next();
+                            Borrower b = (Borrower) borrowerEntry.getKey();
                             //currentborrowername
                             atts.clear();
                             handler.startElement("","","currentborrowername",atts);
@@ -152,7 +155,7 @@ public class PublicationParser implements LibraryLogParser {
                     //reservers
                     atts.clear();
                     handler.startElement("","","reservers",atts);
-                    for(ItemReserver b:a.getReservers()){
+                    for(ItemReserver b:a.getReserveRegistrationCard().getReservelog()){
                          //reservername
                         atts.clear();
                         Borrower c=(Borrower)b;

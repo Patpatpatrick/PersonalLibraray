@@ -21,6 +21,9 @@ public abstract class OperationCenter implements PublicationModule, UserModule {
     abstract public void displayAll();
     abstract public boolean borrowOrReserveItems(String bookName, String isbn, Borrower borrower) throws Exception, AlreadyLoanException;
     //Following five methods and the above method are inheriting PublicationModule!!!
+    protected void five(){
+        System.out.println("q");
+    }
     @Override
     public boolean stringIsUserName(String usernamereceiver) throws NonExistException {
         if(BorrowerList.getBorrowerHashMap().containsKey(usernamereceiver))

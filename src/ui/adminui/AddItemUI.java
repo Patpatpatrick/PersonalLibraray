@@ -108,8 +108,4 @@ public class AddItemUI extends JFrame{
             }
         });
     }
-
-    public static void main(String[] args) {
-        new AddItemUI();
-    }
 }

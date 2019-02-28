@@ -33,8 +33,4 @@ public class AdminOperationUI extends JFrame {
         });
     }
 
-
-    public static void main(String[] args) {
-        new AdminOperationUI();
-    }
 }

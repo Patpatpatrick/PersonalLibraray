@@ -70,12 +70,8 @@ public class Borrower implements ItemReserver {
 
     @Override
     public void updateWith(String name, String isbn, int remaining) throws MessagingException {
-//        System.out.println("An email is sent to me:");
-//        System.out.println(name+" "+isbn+"is now available with "+remaining+" shares!");
-//        System.out.println("You can go and get it now!!");
         EmailCenter.getInstance().setMailServerProperties();
         EmailCenter.getInstance().createEmailMessageToReservers(email,nameofbrwr,name,isbn,remaining);
-//        emailCenter.sendEmail();
     }
 
 }

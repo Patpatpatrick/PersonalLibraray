@@ -65,7 +65,7 @@ public class AdminLoginUI extends JFrame {
         this.setLayout(new BorderLayout());
         makeBasicLayout();
         eventSources();
-        setSize(500,500);
+        setSize(500,200);
         setLocation(300,300);
         setVisible(true);
     }

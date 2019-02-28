@@ -40,7 +40,7 @@ public class UserLoginUI extends JFrame {
         JPanel jPanel=new JPanel(new GridLayout(2,1));
         JPanel j1=new JPanel(new FlowLayout());
         JPanel j11=new JPanel(new GridLayout(2,2));
-        JPanel j22=new JPanel(new GridLayout(3,2));
+        JPanel signUpPanel=new JPanel(new GridLayout(4,2));
         JPanel j2=new JPanel(new FlowLayout());
 
         j1.add(entrancenotion);
@@ -53,15 +53,15 @@ public class UserLoginUI extends JFrame {
         j1.add(loginRemainingCntr.remainingattemptnotice);
 
         j2.add(signup);
-        j22.add(newusernamelabel);
-        j22.add(newusername);
-        j22.add(newpasswordlable);
-        j22.add(newpassword);
-        j22.add(confirmpasswordlabel);
-        j22.add(confirmpassword);
-        j22.add(email);
-        j22.add(newuseremail);
-        j2.add(j22);
+        signUpPanel.add(newusernamelabel);
+        signUpPanel.add(newusername);
+        signUpPanel.add(newpasswordlable);
+        signUpPanel.add(newpassword);
+        signUpPanel.add(confirmpasswordlabel);
+        signUpPanel.add(confirmpassword);
+        signUpPanel.add(email);
+        signUpPanel.add(newuseremail);
+        j2.add(signUpPanel);
         j2.add(signupbtn);
 
         jPanel.add(j1);

@@ -21,7 +21,6 @@ public class CalendarPanel extends JPanel {
     private JLabel yearlabel;
     private JLabel monthlabel;
 
-    private JButton buttonok;
     private JButton button_today;
 
     private JLabel[] button_week = new JLabel[7];
@@ -43,6 +42,7 @@ public class CalendarPanel extends JPanel {
 
     public CalendarPanel(){
         nowdate=LocalDate.now();
+        selecteddate=LocalDate.now();
         makeBasicLayout();
         eventSources();
         setSize(700,280);
@@ -54,9 +54,11 @@ public class CalendarPanel extends JPanel {
         button_today.addMouseListener(new MouseActionListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-
                 paintDay(nowdate);
-
+                int index = nowdate.getDayOfMonth()+nowdate.with(firstDayOfMonth()).getDayOfWeek().getValue() - 1 ;
+//                button_day[index].setBackground(Color.red);
+//                button_day[index].setOpaque(true);
+                generateDate((int)yearbox.getSelectedItem(),monthbox.getSelectedIndex()+1,Integer.parseInt(button_day[index].getText()));
             }
         });
 
@@ -66,6 +68,9 @@ public class CalendarPanel extends JPanel {
                 button_day[i].addMouseListener(new MouseActionListener() {
                     @Override
                     public void mouseClicked(MouseEvent e) {
+//                        paintDay(nowdate);
+//                        a.setBackground(Color.red);
+//                        a.setOpaque(true);
                         generateDate((int)yearbox.getSelectedItem(),monthbox.getSelectedIndex()+1,Integer.parseInt(a.getText()));
                     }
                 });
@@ -83,8 +88,7 @@ public class CalendarPanel extends JPanel {
         yearbox = new JComboBox();
         yearlabel = new JLabel("Year：");
         monthlabel = new JLabel("Month：");
-        buttonok = new JButton("Confirm");
-        button_today = new JButton("Today");
+        button_today = new JButton("CurrentMonth");
         nowyear = nowdate.getYear();
         nowmonth = nowdate.getMonthValue();
 
@@ -96,7 +100,6 @@ public class CalendarPanel extends JPanel {
         panelym.add(monthlabel);
         panelym.add(monthbox);
         panelym.add(button_today);
-        panelym.add(buttonok);
 
         JPanel panelday = new JPanel();
         panelday.setLayout(new GridLayout(7, 7, 0, 0));

@@ -2,12 +2,18 @@ package ui.adminui;
 
 import ui.Frames.SearchByItemsPanel;
 
-import java.awt.*;
+import javax.swing.*;
 
-public class ManagePublicationPanel extends SearchByItemsPanel {
+public class ManagePublicationPanel extends JFrame {
 
-    public ManagePublicationPanel() throws HeadlessException {
-        super("Manage Items","Welcome administrator","items");
+    private SearchByItemsPanel searchByItemsPanel;
+
+    public ManagePublicationPanel(){
+        super("Manage Borrowers");
+        searchByItemsPanel = new SearchByItemsPanel("admin");
+        add(searchByItemsPanel);
+        setSize(1000,800);
+        setVisible(true);
     }
 
 }

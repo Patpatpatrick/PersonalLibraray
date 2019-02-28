@@ -37,6 +37,8 @@ public abstract class Publication {
         authorname = authorName;
         shares =new SharesInfo(multiplicity);
         borrowRegistrationCard = new BorrowRegistrationCard(LocalDate.now());
+        reserveRegistrationCard = new ReserveRegistrationCard();
+
     }
 
 
@@ -55,6 +57,7 @@ public abstract class Publication {
         this.authorname = authorname;
         this.shares = shares;
         borrowRegistrationCard = new BorrowRegistrationCard(LocalDate.now());
+        reserveRegistrationCard = new ReserveRegistrationCard();
     }
 
     Publication(String name, String isbn, String authorName, int multiplicity, LocalDate itemimportdate) {
@@ -63,6 +66,8 @@ public abstract class Publication {
         authorname = authorName;
         shares =new SharesInfo(multiplicity);
         borrowRegistrationCard = new BorrowRegistrationCard(itemimportdate);
+        reserveRegistrationCard = new ReserveRegistrationCard();
+
     }
 
     public SharesInfo getShares() {

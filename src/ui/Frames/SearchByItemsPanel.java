@@ -24,7 +24,7 @@ public class SearchByItemsPanel extends JPanel {
             "name of borrower"
     };
 
-    public SearchByItemsPanel(String title,String callingname,String item) {
+    public SearchByItemsPanel(String callingname) {
         this.setLayout(new BorderLayout());
         searchButtonCombinationPanel = new SearchButtonCombinationPanel(callingname);
         itemResultTablePanel = new ItemResultTablePanel(columnTitles);
@@ -89,10 +89,4 @@ public class SearchByItemsPanel extends JPanel {
         return itemResultTablePanel;
     }
 
-    public static void main(String[] args) {
-        JFrame n=new JFrame();
-        n.setSize(700,700);
-        n.add(new SearchByItemsPanel("s","s","s"));
-        n.setVisible(true);
-    }
 }

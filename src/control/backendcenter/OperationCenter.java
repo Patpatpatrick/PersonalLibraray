@@ -13,41 +13,9 @@ import java.util.List;
 
 public abstract class OperationCenter implements PublicationModule, UserModule {
 
-    //Following seven methods are inheriting PublicationModule!!!
-//
 
-    abstract public boolean addPublication(String bookName) throws IOException;
-    abstract public void displayByName(String name) throws NonExistException;
-    abstract public void displayAll();
     abstract public boolean borrowOrReserveItems(String bookName, String isbn, Borrower borrower) throws Exception, AlreadyLoanException;
-    //Following five methods and the above method are inheriting PublicationModule!!!
-    protected void five(){
-        System.out.println("q");
-    }
-    @Override
-    public boolean stringIsUserName(String usernamereceiver) throws NonExistException {
-        if(BorrowerList.getBorrowerHashMap().containsKey(usernamereceiver))
-            return true;
-        throw new NonExistException("There is no such user");
-    }
-    @Override
-    public Borrower stringIsThisBorrower(String usernamereceiver) throws NonExistException {
-        if(BorrowerList.getBorrowerHashMap().containsKey(usernamereceiver)){
-            Borrower borrower=BorrowerList.getBorrowerHashMap().get(usernamereceiver);
-            return borrower;
-        }
-        throw new NonExistException("There is no such user");
-    }
-    @Override
-    public Borrower correctPassword(String username, String passwordReiceiver) throws NonExistException {
-        if(BorrowerList.getBorrowerHashMap().containsKey(username)){
-            if (passwordReiceiver.equals(BorrowerList.getBorrowerHashMap().get(username).getPassword())){
-                Borrower borrower=BorrowerList.getBorrowerHashMap().get(username);
-                return borrower;
-            }
-        }
-        throw new NonExistException("There is no such user");
-    }
+
     @Override
     public boolean addBorrower(String username, String userpassword, String Email) throws IOException {
         Borrower newBorrower= new Borrower(username,userpassword,Email);

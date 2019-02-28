@@ -20,6 +20,8 @@ import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -138,9 +140,9 @@ public class PublicationParser implements LibraryLogParser {
                         handler.characters(Integer.toString(a.getShares().getRemaining()).toCharArray(), 0, Integer.toString(a.getShares().getRemaining()).length());
                         handler.endElement("", "", "remaining");
                     handler.endElement("", "", "sharesinfo");
-                    //currentborrowerlist
+                    //currentBorrowerDuedateMap
                     atts.clear();
-                    handler.startElement("","","borrowers",atts);
+                    handler.startElement("","","BorrowersDueDate",atts);
                         Iterator borrowerIter = a.getBorrowRegistrationCard().getBorrowlog().entrySet().iterator();
                         while (borrowerIter.hasNext()) {
                             HashMap.Entry borrowerEntry = (HashMap.Entry) borrowerIter.next();
@@ -150,8 +152,15 @@ public class PublicationParser implements LibraryLogParser {
                             handler.startElement("","","currentborrowername",atts);
                             handler.characters(b.getNameofbrwr().toCharArray(), 0,b.getNameofbrwr().length());
                             handler.endElement("", "", "currentborrowername");
+                            atts.clear();
+                            LocalDate duedate = (LocalDate) borrowerEntry.getValue();
+                            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd LLLL yyyy");
+                            String formattedString = duedate.format(formatter);
+                            handler.startElement("","","duedate",atts);
+                            handler.characters(formattedString.toCharArray(), 0,formattedString.length());
+                            handler.endElement("", "", "duedate");
                         }
-                    handler.endElement("", "", "borrowers");
+                    handler.endElement("", "", "BorrowersDueDate");
                     //reservers
                     atts.clear();
                     handler.startElement("","","reservers",atts);

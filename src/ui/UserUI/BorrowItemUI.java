@@ -23,7 +23,7 @@ public class BorrowItemUI extends JFrame{
     public BorrowItemUI(Borrower borrowerinoperation) {
         this.setLayout(new BorderLayout());
         this.borrowerinoperation=borrowerinoperation;
-        searchpanel=new SearchByItemsPanel("Library","welcome!"+borrowerinoperation.getNameofbrwr(),"items");
+        searchpanel=new SearchByItemsPanel("welcome!"+borrowerinoperation.getNameofbrwr());
         this.add(searchpanel);
         JPanel jp=new JPanel(new FlowLayout());
         jp.add(confirm);
